@@ -1,2 +1,2 @@
-# USTARS
+# USTAR
 U
