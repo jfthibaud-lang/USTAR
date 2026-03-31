@@ -68,7 +68,6 @@
 
         .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
         .nav-wordmark { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.6rem; letter-spacing: 0.05em; color: var(--paper); }
-        .nav-wordmark sup { color: var(--yellow); font-size: 0.9em; }
         .nav-links { display: flex; gap: 30px; list-style: none; }
         .nav-links a { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: #888; text-decoration: none; transition: color 0.2s; }
         .nav-links a:hover { color: var(--yellow); }
@@ -98,12 +97,13 @@
             top: 50%; left: 50%;
             transform: translate(-50%, -60%);
             text-align: center;
+            width: 100%;
         }
 
         .hero-logo-big {
-            width: min(28vw, 180px);
+            width: min(35vw, 220px);
             height: auto;
-            filter: drop-shadow(0 0 50px rgba(0,71,171,0.3));
+            filter: drop-shadow(0 0 40px rgba(255, 255, 255, 0.1));
         }
 
         .hero-bottom {
@@ -192,8 +192,7 @@
             color: #555;
             margin-bottom: 24px;
             display: flex;
-            align-items: center;
-            gap: 14px;
+            align-items: center; gap: 14px;
         }
         .s-eyebrow::after { content: ''; flex: 1; height: 1px; background: #222; }
 
@@ -205,7 +204,7 @@
             text-transform: uppercase;
         }
 
-        /* ── I. SUBSTANCE (COBALT) ── */
+        /* ── I. SUBSTANCE ── */
         #substance { background: var(--cobalt); color: var(--paper); }
         #substance .s-eyebrow { color: rgba(255,255,255,0.4); }
         #substance .s-eyebrow::after { background: rgba(255,255,255,0.2); }
@@ -250,7 +249,7 @@
         .c-text { font-size: 0.85rem; line-height: 1.7; color: #666; }
 
         /* ── V. FONCTION ── */
-        #func-section { background: var(--ink); border-top: 1px solid #222; }
+        #func-section { background: var(--ink); border-top: 1px solid #111; }
         .func-top { text-align: center; padding: 120px 0; border-bottom: 1px solid #111; }
         .func-bottom { display: grid; grid-template-columns: 1fr 1fr; }
         .func-manifesto { padding: 80px; border-right: 1px solid #111; }
@@ -294,10 +293,11 @@
 <!-- NAVIGATION -->
 <nav>
     <a href="#" class="nav-logo">
-        <svg viewBox="0 0 217 352" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:28px;height:auto">
-            <path fill="#ffffff" d="M162.86,0.5c-25.07,0-45.36,20.13-45.36,45v279h-17.2l-0.44-225c0-24.87-20.29-45-45.36-45h-54v252 c0,24.87,20.13,45,45,45h126c24.88,0,45-20.13,45-45V0.5H162.86z M189.88,51.76l12.47,10.39l-20.78,16.63l-6.24-16.63l-6.24,16.63 l-20.78-16.63l12.47-10.39l-16.63-4.16l8.31-20.79l14.56,8.32l0.12,0.16l-4.28-16.6l24.94-0.19l-4,16.55l14.4-8.24l8.31,20.79 L189.88,51.76z"/>
+        <svg width="24" height="38" viewBox="0 0 216 352" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M162.864 0.5C137.795 0.5 117.5 20.6274 117.5 45.5V324.5H100.3L99.86 99.5C99.86 74.6274 79.5726 54.5 54.5 54.5H0.5V306.5C0.5 331.373 20.6274 351.5 45.5 351.5H171.5C196.373 351.5 216.5 331.373 216.5 306.5V0.5H162.864Z" fill="white"/>
+            <path d="M189.875 51.7618L202.341 62.1506L181.564 78.7777L175.32 62.1506L169.077 78.7777L148.3 62.1506L160.766 51.7618L144.139 47.6041L152.453 26.819L167.009 35.1328L167.129 35.2925L162.85 18.6946L187.793 18.5029L183.793 35.0537L198.193 26.819L206.507 47.6041L189.875 51.7618Z" fill="var(--ink)"/>
         </svg>
-        <div class="nav-wordmark"><sup></sup></div>
+        <div class="nav-wordmark">U<sup>*</sup></div>
     </a>
     <ul class="nav-links">
         <li><a href="#substance">Substance</a></li>
@@ -312,8 +312,9 @@
 <section id="hero">
     <div class="hero-bg-grid"></div>
     <div class="hero-center">
-        <svg class="hero-logo-big" viewBox="0 0 217 352" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill="#ffffff" d="M162.86,0.5c-25.07,0-45.36,20.13-45.36,45v279h-17.2l-0.44-225c0-24.87-20.29-45-45.36-45h-54v252 c0,24.87,20.13,45,45,45h126c24.88,0,45-20.13,45-45V0.5H162.86z M189.88,51.76l12.47,10.39l-20.78,16.63l-6.24-16.63l-6.24,16.63 l-20.78-16.63l12.47-10.39l-16.63-4.16l8.31-20.79l14.56,8.32l0.12,0.16l-4.28-16.6l24.94-0.19l-4,16.55l14.4-8.24l8.31,20.79 L189.88,51.76z"/>
+        <svg class="hero-logo-big" width="216" height="352" viewBox="0 0 216 352" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M162.864 0.5C137.795 0.5 117.5 20.6274 117.5 45.5V324.5H100.3L99.86 99.5C99.86 74.6274 79.5726 54.5 54.5 54.5H0.5V306.5C0.5 331.373 20.6274 351.5 45.5 351.5H171.5C196.373 351.5 216.5 331.373 216.5 306.5V0.5H162.864Z" fill="white"/>
+            <path d="M189.875 51.7618L202.341 62.1506L181.564 78.7777L175.32 62.1506L169.077 78.7777L148.3 62.1506L160.766 51.7618L144.139 47.6041L152.453 26.819L167.009 35.1328L167.129 35.2925L162.85 18.6946L187.793 18.5029L183.793 35.0537L198.193 26.819L206.507 47.6041L189.875 51.7618Z" fill="var(--ink)"/>
         </svg>
     </div>
     <div class="hero-bottom">
@@ -368,22 +369,6 @@
         <span>Épure</span><span class="t-sep">✦</span>
         <span>Transmission</span><span class="t-sep">✦</span>
         <span>Subjectivité</span><span class="t-sep">✦</span>
-        <!-- Duplication -->
-        <span>Abnégation</span><span class="t-sep">✦</span>
-        <span>Rigueur</span><span class="t-sep">✦</span>
-        <span>Intuition</span><span class="t-sep">✦</span>
-        <span>Universalité</span><span class="t-sep">✦</span>
-        <span>Rationalisme</span><span class="t-sep">✦</span>
-        <span>Détermination</span><span class="t-sep">✦</span>
-        <span>Formalisme</span><span class="t-sep">✦</span>
-        <span>Anticonformisme</span><span class="t-sep">✦</span>
-        <span>Curiosité</span><span class="t-sep">✦</span>
-        <span>Lumières</span><span class="t-sep">✦</span>
-        <span>Observation</span><span class="t-sep">✦</span>
-        <span>Transcendance</span><span class="t-sep">✦</span>
-        <span>Abstraction</span><span class="t-sep">✦</span>
-        <span>Synthèse</span><span class="t-sep">✦</span>
-        <span>Vision</span><span class="t-sep">✦</span>
     </div>
 </div>
 
@@ -396,7 +381,6 @@
                 <div class="mkt-big">
                     <span class="crossed">Le Superflu</span><br>
                     <span class="instead">L'Essence du concept</span>
-                    <span class="instead"></span>
                 </div>
             </div>
             <div class="mkt-body reveal">
@@ -433,7 +417,6 @@
             <div class="sci-row"><div class="sci-letter">C</div><div><div class="sci-name">Franquin</div></div><div class="sci-domain">Gaston · imaginaire</div><div class="sci-year">Détermination</div></div>
             <div class="sci-row"><div class="sci-letter">P</div><div><div class="sci-name">Poincaré</div></div><div class="sci-domain">Intuition · Chaos</div><div class="sci-year">Vision</div></div>
             <div class="sci-row"><div class="sci-letter">C</div><div><div class="sci-name">Cezanne</div></div><div class="sci-domain">travailleur · génie</div><div class="sci-year">la Rupture</div></div>
-
         </div>
         <div class="sci-footer-bar reveal" style="margin-top:60px; display:grid; grid-template-columns:repeat(3, 1fr); border:1px solid #222;">
             <div class="sci-pillar" style="padding:40px 30px; border-right:1px solid #222;">
@@ -487,11 +470,11 @@
     <div class="creation-mosaic reveal">
         <div class="c-cell">
             <div class="c-title">Lavoisier</div>
-            <div class="c-text">a dépouillé la chimie de ses mystères pour n'en garder que la balance rigoureuse et la conservation éternelle de la matière</div>
+            <div class="c-text">a dépouillé la chimie de ses mystères pour n'en garder que la balance rigoureuse et la conservation éternelle de la matière.</div>
         </div>
         <div class="c-cell">
             <div class="c-title">Carnot</div>
-            <div class="c-text">a réduit la puissance du feu à un cycle idéal de températures, fondant la thermodynamique sur une abstraction d'une pureté absolu</div>
+            <div class="c-text">a réduit la puissance du feu à un cycle idéal de températures, fondant la thermodynamique sur une abstraction d'une pureté absolue.</div>
         </div>
         <div class="c-cell">
             <div class="c-title">Ampère</div>
@@ -507,9 +490,9 @@
 <!-- V. FONCTION -->
 <section id="func-section">
     <div class="func-top">
-        <svg style="width:120px" viewBox="0 0 217 352" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill="#ffffff" d="M162.86,0.5c-25.07,0-45.36,20.13-45.36,45v279h-17.2l-0.44-225c0-24.87-20.29-45-45.36-45h-54v252 c0,24.87,20.13,45,45,45h126c24.88,0,45-20.13,45-45V0.5H162.86z M189.88,51.76l12.47,10.39l-20.78,16.63l-6.24-16.63l-6.24,16.63 l-20.78-16.63l12.47-10.39l-16.63-4.16l8.31-20.79l14.56,8.32l0.12,0.16l-4.28-16.6l24.94-0.19l-4,16.55l14.4-8.24l8.31,20.79 L189.88,51.76z"/>
-        </svg>
+        <!-- ÉPURE DE CONSTRUCTION DU LOGO (GENESE.jpg) -->
+        <img src="GENESE.jpg" alt="Épure de construction U*" style="width:160px; height:auto; opacity:0.8; filter: invert(1); margin-bottom: 20px;">
+        
         <div style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.4rem; text-transform: uppercase; margin-top: 20px; color: var(--paper);">Amplior, Vastior, Ultra Somnia<br> Le nouveau U* pour toi</div>
     </div>
     <div class="func-bottom">
@@ -531,7 +514,7 @@
 <footer>
     <div class="footer-brand-name">U<sup>*</sup></div>
     <div class="footer-mid">
-        Pascal · Stratos · Lavoisier ·Bangski · Hugo · Poincaré<br>
+        Pascal · Stratos · Lavoisier · Bangski · Hugo · Poincaré<br>
         // du latin que personne ne comprend à un site web qui n'a aucun sens....U*
     </div>
     <div class="footer-right">Amplior, Vastior, et truc somnia machin</div>
